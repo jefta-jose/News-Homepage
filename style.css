@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400,700&display=swap');
+
+:root {
+  --primary-orange: hsl(35, 77%, 62%);
+  --primary-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white; /* Set background color for the body */
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+}
+
+.main {
+    width: 70vw;
+    height: 80vh;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--off-white);
+  }
+  
+  .logo {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  .lists > ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .lists li {
+    margin-right: 20px;
+  }
+  
+  .lists li:hover {
+    color: var(--primary-red);
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  /* End of nav */
+  
+  .middle-grid-container {
+    width: 70vw;
+    height: 55vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*understand that for the letters to work in column form the columns must also align*/
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-areas:
+      "d d r"
+      "f f r";
+  }
+  
+  .grid-desktop-image {
+    grid-area: d;
+    height: 23vh;
+  }
+  .grid-desktop-image img{
+    width: 100%;
+  }
+
+  .future-read-grid {
+    background-color: var(--off-white);
+    grid-area: f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 0 10px;
+  }
+  .inside-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Updated to two columns */
+    grid-template-rows: repeat(1, 1fr);
+    gap: 20px;
+    grid-template-areas: 
+      "b rd"; /* Corrected grid areas */
+}
+
+  .big{
+    width: 100%;
+    grid-area: b;
+  }
+  .big p{
+    font-size: 44px;
+    font-weight: 700;
+  }
+
+
+  .read{
+    width: 100%;
+    grid-area: rd;
+  }
+  .read p{
+    margin-bottom: 35px;
+    color: var(--dark-grayish-blue);
+    font-weight: 400;
+  }
+  button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .black-grid {
+    background-color: black;
+    grid-area: r;
+  }
+  .inside-black-grid{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+  }
+
+  .inside-black-grid h1{
+    margin-top: 40px;
+    color: var(--primary-orange);
+  }
+  .inside-black-grid > div{
+    margin-bottom: 40px;
+  }
+  .inside-black-grid h4 {
+    color: var(--off-white);
+  }
+  .inside-black-grid p{
+    color: var(--grayish-blue);
+    font-weight: 400;
+  }
+
+  .middle-ground{
+    border-top: 2px solid var(--primary-orange);
+    border-bottom: 2px solid var(--primary-orange);
+  }
+  .middle-ground h4{
+    color: var(--primary-orange);
+    padding-top: 20px;
+  }
+  .middle-ground p{
+    padding-bottom: 20px;
+  }
+/*8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
+
+.bottom-grid{
+    width: 100%;
+    height: 17.8vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin-top: 20px;
+}
+.one{
+
+}
+
+.inside-one{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.inside-one img{
+    width: 93px;
+    height: 100%;
+}
+
+.inside-one h2{
+    color: var(--grayish-blue);
+    margin-top: 10px;
+}
+.inside-one h3{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.inside-one p{
+    color: var(--dark-grayish-blue);
+}
